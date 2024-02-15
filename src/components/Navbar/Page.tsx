@@ -12,7 +12,7 @@ export default function Navbar() {
     { label: "Shop Details", url: "/shop-details" },
     {
       label: "Pages",
-      url: "/pages",
+      url: "/",
       dropdown: true,
       children: [
         { label: "Cart", url: "/pages/cart" },
