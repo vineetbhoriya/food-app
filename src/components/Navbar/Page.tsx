@@ -42,7 +42,7 @@ export default function Navbar() {
       {/* First */}
       <div>
         <Link to="/">
-          <h1 className="capitalize text-[2.5rem] text-primary font-bold">
+          <h1 className="capitalize lg:text-[2.5rem] text-[1.5rem] text-primary font-bold">
             Fruitables
           </h1>
         </Link>
