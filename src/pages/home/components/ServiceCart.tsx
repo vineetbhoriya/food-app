@@ -42,7 +42,7 @@ export default function ServiceCart() {
           {products.map((product) => (
             <div
               key={product.id}
-              className="group relative w-full max-w-2xl rounded-lg  bg-gray-200 lg:p-8 p-5 flex flex-col items-center justify-center"
+              className="group relative w-full max-w-xl rounded-lg  bg-gray-200 lg:px-16 lg:py-10 p-5 flex flex-col items-center justify-center"
             >
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 flex items-center justify-center">
                 <div className="flex justify-center items-center">
@@ -68,3 +68,4 @@ export default function ServiceCart() {
     </div>
   );
 }
+

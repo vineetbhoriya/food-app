@@ -1,11 +1,14 @@
+import Index from "./components/Carousel2";
 import { CarouselTransition } from "./components/CarouselTransition";
+import OfferCarts from "./components/OfferCarts";
 import Products from "./components/Products";
+import SecondaryBanner from "./components/SecondaryBanner";
 import ServiceCart from "./components/ServiceCart";
 
 export default function Home() {
   return (
     <>
-      <div className="homeheader flex lg:flex-row flex-col lg:justify-around gap-10 items-center py-28 px-10">
+      <div className="homeheader flex lg:flex-row flex-col lg:justify-around gap-10 items-center py-36 px-10">
         <div className="flex lg:flex-col flex-col md:items-start md:w-[40%]">
           <h2 className="text-secondary md:text-[2rem] lg:text-[2.5rem]  font-semibold">
             100% Organic Foods
@@ -17,8 +20,10 @@ export default function Home() {
             <input
               type="text"
               placeholder="search"
-              className="text-sm md:text-xl font-thin md:px-5 px-3 py-2 md:py-3 rounded-full outline-none flex-grow"
+              className="text-sm md:text-xl font-thin md:px-5 px-3 py-2 md:py-3 border-0 focus:border-0 focus:outline-none outline-none rounded-full flex-grow"
+              style={{ outline: "none", boxShadow: "none" }}
             />
+
             <button className="rounded-full min-w-[10%] bg-primary hover:bg-secondary border border-secondary font-medium text-white px-4 py-2 md:px-5 md:py-3">
               Submit Now
             </button>
@@ -37,6 +42,13 @@ export default function Home() {
       <section>
         <Products></Products>
       </section>
+      <section>
+        <OfferCarts></OfferCarts>
+      </section>
+      <section>
+        <Index></Index>
+      </section>
+      <SecondaryBanner></SecondaryBanner>
     </>
   );
 }
