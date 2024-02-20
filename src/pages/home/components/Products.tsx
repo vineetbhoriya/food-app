@@ -104,11 +104,11 @@ export default function Products() {
     };
     return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 flex md:flex-row flex-col items-center md:space-y-0 space-y-5 justify-between">
         <h2 className="text-4xl font-bold tracking-tight text-gray-900">
           Our Organic Products
         </h2>
-        <div className="flex lg:flex-row flex-wrap gap-x-10 gap-y-3">
+        <div className="flex lg:flex-row flex-wrap md:gap-x-10 gap-x-3 gap-y-3">
           {Buttons.map((btn) => (
             <div key={btn.id}>
               <Button

@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const links = [
     { label: "Home", url: "/" },
-    { label: "Shop", url: "/shop" },
-    { label: "Shop Details", url: "/shop-details" },
+    { label: "Team", url: "/team" },
+    // { label: "Shop Details", url: "/shop-details" },
     {
       label: "Pages",
       url: "/",
@@ -38,7 +38,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="border-2 font-Raleway,sans-serif py-[0.75rem] max-w-screen px-5 w-full ease-in duration-200 flex flex-row lg:justify-around justify-between items-center sticky shadow-md">
+    <nav className="border-2 font-Raleway,sans-serif py-[0.75rem] max-w-screen px-5 w-full ease-in duration-200 flex flex-row lg:justify-around justify-between items-center fixed z-20 bg-white shadow-md">
       {/* First */}
       <div>
         <Link to="/">
