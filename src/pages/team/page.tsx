@@ -1,3 +1,9 @@
+import React, { Suspense } from 'react';
+
+// Define LazyLoadedImage component
+const LazyLoadedImage = React.lazy(() => import('./LazyLoadedImage'));
+
+// Define your people array
 const people = [
   {
     name: "Leslie Alexander",
@@ -36,17 +42,21 @@ const people = [
   },
 ];
 
+// Main Example component
 export default function Example() {
   return (
     <ul role="list" className="divide-y divide-gray-100 md:pt-[10rem]">
       {people.map((person) => (
         <li key={person.email} className="flex justify-around gap-x-6 py-5">
           <div className="flex min-w-0 gap-x-4">
-            <img
-              className="h-12 w-12 flex-none rounded-full object-cover bg-gray-50"
-              src={person.imageUrl}
-              alt=""
-            />
+            {/* Lazy load the image */}
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyLoadedImage
+                className="h-12 w-12 flex-none rounded-full object-cover bg-gray-50"
+                src={person.imageUrl}
+                alt=""
+              />
+            </Suspense>
             <div className="min-w-0 flex-auto">
               <p className="text-sm font-semibold leading-6 text-gray-900">
                 {person.name}
@@ -60,7 +70,7 @@ export default function Example() {
             <p className="text-sm leading-6 text-gray-900">{person.role}</p>
             {person.lastSeen ? (
               <p className="mt-1 text-xs leading-5 text-gray-500">
-                Last seen{" "}
+                Last seen{' '}
                 <time dateTime={person.lastSeenDateTime}>
                   {person.lastSeen}
                 </time>
